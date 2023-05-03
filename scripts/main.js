@@ -62,13 +62,13 @@ var flkty = new Flickity(elem, {
 });
 
 // accordion
-var acc = document.getElementsByClassName("accordion");
-var i;
+const acc = document.getElementsByClassName("accordion");
+let i;
 
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function () {
     this.classList.toggle("active");
-    var panel = this.nextElementSibling;
+    const panel = this.nextElementSibling;
     if (panel.style.maxHeight) {
       panel.style.maxHeight = null;
     } else {
@@ -76,3 +76,32 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
+// colour and size selector
+const colourSelectors = document.querySelectorAll(
+  ".product-info--colour-selector ul li"
+);
+
+colourSelectors.forEach((selector) => {
+  selector.addEventListener("click", () => {
+    const currentlyActive = document.querySelector(
+      ".product-info--colour-selector ul li.active"
+    );
+    currentlyActive.classList.remove("active");
+    selector.classList.add("active");
+  });
+});
+
+const sizeSelectors = document.querySelectorAll(
+  ".product-info--size-selector ul li"
+);
+
+sizeSelectors.forEach((selector) => {
+  selector.addEventListener("click", () => {
+    const currentlyActive = document.querySelector(
+      ".product-info--size-selector ul li.active"
+    );
+    currentlyActive.classList.remove("active");
+    selector.classList.add("active");
+  });
+});

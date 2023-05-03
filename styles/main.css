@@ -331,10 +331,12 @@ li{
 }
 
 .product-info--size-selector ul li{
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    color: #343434;
     margin-right: 10px;
     border: 1px solid #ddd;
-    padding: 4px;
-    width: 25%;
+    padding: 4px 12px;
     text-align: center;
 }
 

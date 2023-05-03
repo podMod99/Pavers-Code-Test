@@ -6,11 +6,286 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Influenced by 1970's style, the Lou Lou knee-high boots embody timelessness. Constructed from ultra-soft suede in a long-leg silhouette, Lou Lou is poised upon a versatile low-block heel. Fully leather lined for a luxury look and feel, and fastened courtesy of an inside zip. Embrace 70's style by pairing Lou Lou with floral prints and fringes.">
     <title>Lou Lou Knee-High Boots (LOULOU) by Jones Bootmaker</title>
-    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/flickity.min.css" media="screen">
+    <link rel="stylesheet" href="styles/photoswipe.css">
     <link rel="stylesheet" href="styles/main.css">
-    <script src="scripts/main.js"></script>
+    <script src="scripts/flickity.pkgd.min.js"></script>
+    <script src="scripts/main.js" defer></script>
+
+    <script type="module">
+        import PhotoSwipeLightbox from './scripts/photoswipe-lightbox.esm.js';
+        const lightbox = new PhotoSwipeLightbox({
+          gallery: '#gallery--getting-started',
+          children: 'a',
+          pswpModule: () => import('./scripts/photoswipe.esm.js')
+        });
+        lightbox.init();
+    </script>
 </head>
+
 <body>
-    <!-- HEADER -->
+    <div class="page-container">
+        <!-- || ANNOUNCEMENT BAR -->
+        <section class="announcement-bar">
+            <p class="announcement-bar--content">FREE STANDARD UK DELIVERY ON ORDERS £125 & OVER</p>
+        </section>
+
+        <!-- || HEADER -->
+        <header class="site-header">
+            <div class="site-header--top-nav-wrapper">
+                <div class="site-header--hamburger">
+                    <svg class="" role="presentation" viewBox="0 0 20 14">
+                        <path d="M0 14v-1h20v1H0zm0-7.5h20v1H0v-1zM0 0h20v1H0V0z" fill="currentColor"></path>
+                    </svg>
+                </div>
+                <div class="site-header--logo">
+                    <img src="assets/images/logo.webp" alt="Jones Bootmaker logo">
+                </div>
+                <div class="site-header--icons">
+                    <span class="search-icon">
+                        <svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.914 19.914">
+                            <g id="Group_5665" data-name="Group 5665" transform="translate(-5162.429 1762.25)">
+                              <g id="Ellipse_43" data-name="Ellipse 43" transform="translate(5165.343 -1762.25)" fill="none" stroke="#0a0a0a" stroke-width="2">
+                                <circle cx="7.5" cy="7.5" r="7.5" stroke="none"></circle>
+                                <circle cx="7.5" cy="7.5" r="6.5" fill="none"></circle>
+                              </g>
+                              <line id="Line_156" data-name="Line 156" x1="5" y2="5" transform="translate(5163.843 -1748.75)" fill="none" stroke="#0a0a0a" stroke-linecap="round" stroke-width="2"></line>
+                            </g>
+                        </svg>
+                    </span>
+                    <span class="cart-icon">
+                        <svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20.172 20.165">
+                            <g id="Group_5669" data-name="Group 5669" transform="translate(-5536.768 1763.197)">
+                              <path id="Icon" d="M1373.049-8.868a2.014,2.014,0,0,0-2.006,2.016,2.014,2.014,0,0,0,2.006,2.016,2.022,2.022,0,0,0,2.016-2.016A2.022,2.022,0,0,0,1373.049-8.868ZM1367-23.992a1.011,1.011,0,0,0,1.008,1.008h1.008l3.63,7.653-1.361,2.46a2.02,2.02,0,0,0,1.764,2.994h11.091a1.011,1.011,0,0,0,1.008-1.008,1.011,1.011,0,0,0-1.008-1.008h-11.091l1.109-2.016h7.511a2.007,2.007,0,0,0,1.764-1.038l3.609-6.543a1,1,0,0,0-.877-1.492h-14.922l-.675-1.442a1,1,0,0,0-.907-.575h-1.653A1.011,1.011,0,0,0,1367-23.992Zm16.132,15.124a2.014,2.014,0,0,0-2.006,2.016,2.014,2.014,0,0,0,2.006,2.016,2.022,2.022,0,0,0,2.016-2.016A2.022,2.022,0,0,0,1383.132-8.868Z" transform="translate(4169.768 -1738.197)" fill="#141414" fill-rule="evenodd"></path>
+                            </g>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+
+            <div class="site-header--bottom-nav-wrapper hidden-mobile"></div>
+        </header>
+
+        <!-- || BREADCRUMBS -->
+        <nav class="breadcrumbs" role="navigation" aria-label="breadcrumbs">
+            <ol class="breadcrumbs--list">
+                <li class="breadcrumbs--list-item">
+                    <a href="/" class="breadcrumbs--link">Home</a>
+                    <span>/</span>
+                </li>
+                <li class="breadcrumbs--list-item">
+                    <a href="/" class="breadcrumbs--link">Boots</a>
+                    <span>/</span>
+                </li>
+                <li class="breadcrumbs--list-item breadcrumbs--list-item__product">
+                    <a href="/" class="breadcrumbs--link">Lou Lou Knee-High Boots by Jones Bootmaker</a>
+                </li>
+            </ol>
+        </nav>
+
+        <!-- || PRODUCT -->
+        <section class="product-wrapper">
+            <div class="product-gallery">
+                <div class="image-wrapper prod-grid-img prod-img-main">
+                    <img src="assets/images/prod-img-1.webp" alt="Lou Lou Knee-High Boots (LOULOU) by Jones Bootmaker" width="" height="">
+                </div>
+                <div class="image-wrapper prod-grid-img">
+                    <img src="assets/images/prod-img-2.webp" alt="Miu Miu Black Pointed Patent Cowboy Boots EU 36" srcset="//cdn.shopify.com/s/files/1/0249/3343/3419/files/P230427144024-closeupfrontdetail-jpg-1.jpg?v=1682605956&amp;width=352 352w, //cdn.shopify.com/s/files/1/0249/3343/3419/files/P230427144024-closeupfrontdetail-jpg-1.jpg?v=1682605956&amp;width=832 832w" width="900" height="1125">
+                </div>
+                <div class="image-wrapper prod-grid-img">
+                    <img src="assets/images/prod-img-3.webp" alt="Miu Miu Black Pointed Patent Cowboy Boots EU 36" srcset="//cdn.shopify.com/s/files/1/0249/3343/3419/files/P230427144024-back2shoesangle-jpg-1.jpg?v=1682605956&amp;width=352 352w, //cdn.shopify.com/s/files/1/0249/3343/3419/files/P230427144024-back2shoesangle-jpg-1.jpg?v=1682605956&amp;width=832 832w" width="900" height="1125">
+                </div>
+
+                <div class="product-media--carousel">
+                    <div class="carousel-cell product-image-carousel-cell image-wrapper ">
+                        <img src="assets/images/prod-img-1.webp" alt="Miu Miu Black Pointed Patent Cowboy Boots EU 36" width="300" height="375">
+                    </div>
+                    <div class="carousel-cell product-image-carousel-cell image-wrapper ">
+                        <img src="assets/images/prod-img-2.webp" alt="Miu Miu Black Pointed Patent Cowboy Boots EU 36" width="300" height="375">
+                    </div>
+                    <div class="carousel-cell product-image-carousel-cell image-wrapper ">
+                        <img src="assets/images/prod-img-3.webp" alt="Miu Miu Black Pointed Patent Cowboy Boots EU 36" width="300" height="375">
+                    </div>
+                    <div class="carousel-cell product-image-carousel-cell image-wrapper ">
+                        <img src="assets/images/prod-img-4.webp" alt="Miu Miu Black Pointed Patent Cowboy Boots EU 36" width="300" height="375">
+                    </div>
+                    <div class="carousel-cell product-image-carousel-cell image-wrapper ">
+                        <img src="assets/images/prod-img-5.webp" alt="Miu Miu Black Pointed Patent Cowboy Boots EU 36" width="300" height="375">
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-info">
+                <span class="product-info--brand-heading">GABOR</span>
+                <h1 class="product-info--title">Keegan Heeled Leather Ankle Boots</h1>
+                <span class="product-info--price">£95</span>
+                <button class="product-info--add-to-cart btn btn-1 hover-filled-slide-right"><span>ADD TO CART</span></button>
+
+                <div class="product-info--colour-selector">
+                    <span>Colour</span>
+                    <ul>
+                        <li class="active">
+                            <img src="assets/images/prod-img-2.webp" alt="Keegan Heeled Leather Ankle Boots Black">
+                        </li>
+                        <li>
+                            <img src="assets/images/prod-img-2.webp" alt="Keegan Heeled Leather Ankle Boots Navy">
+                        </li>
+                    </ul>
+                </div>
+                <div class="product-info--size-selector">
+                    <span>Size</span>
+                    <ul>
+                        <li class="active">
+                             3.5/36.5
+                        </li>
+                        <li>
+                            6/39
+                        </li>
+                        <li>
+                            8/41
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="product-info--description">
+                    <p>
+                        A classic look that will help you look the part whether you're wearing them with dresses or jeans, these Gabor ankle boots are crafted from high-quality leathers for a premium feel.Seated on a stacked heel to add an extra bit of height to your look.
+                    </p>
+                    <ul>
+                        <li>Gender: Female</li>
+                        <li>Upper: Leather</li>
+                        <li>Insole: Textile</li>
+                        <li>Sole: Other</li>
+                        <li>Width: Standard  (D fitting)</li>
+                        <li>Heel Height: 4.5cm</li>
+                    </ul>
+                    <p>REF: GAB36544 <br> ORDER CODE: 323 038</p>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="product-info--delivery-list">
+                    <ul>
+                        <li>FREE Delivery on Orders over £125</li>
+                        <li>Prepaid UK returns for 99p/pair</li>
+                        <li>Next Day Delivery (Tracked): £7.50 per order</li>
+                        <li>Next Day Delivery: £5.50 per order</li>
+                        <li>48-Hour Delivery: £4.50 per order</li>
+                    </ul>
+                </div>
+
+                <div style="display: none;" class="product-info--reviews">
+                    <span>Reviews</span>
+                    <div class="stars">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="20" height="20" viewBox="0 0 122.88 116.864" enable-background="new 0 0 122.88 116.864" xml:space="preserve" style="fill: #174A45;"><g><polygon fill-rule="evenodd" clip-rule="evenodd" points="61.44,0 78.351,41.326 122.88,44.638 88.803,73.491 99.412,116.864 61.44,93.371 23.468,116.864 34.078,73.491 0,44.638 44.529,41.326 61.44,0"/></g></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="20" height="20" viewBox="0 0 122.88 116.864" enable-background="new 0 0 122.88 116.864" xml:space="preserve" style="fill: #174A45;"><g><polygon fill-rule="evenodd" clip-rule="evenodd" points="61.44,0 78.351,41.326 122.88,44.638 88.803,73.491 99.412,116.864 61.44,93.371 23.468,116.864 34.078,73.491 0,44.638 44.529,41.326 61.44,0"/></g></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="20" height="20" viewBox="0 0 122.88 116.864" enable-background="new 0 0 122.88 116.864" xml:space="preserve" style="fill: #174A45;"><g><polygon fill-rule="evenodd" clip-rule="evenodd" points="61.44,0 78.351,41.326 122.88,44.638 88.803,73.491 99.412,116.864 61.44,93.371 23.468,116.864 34.078,73.491 0,44.638 44.529,41.326 61.44,0"/></g></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="20" height="20" viewBox="0 0 122.88 116.864" enable-background="new 0 0 122.88 116.864" xml:space="preserve" style="fill: #174A45;"><g><polygon fill-rule="evenodd" clip-rule="evenodd" points="61.44,0 78.351,41.326 122.88,44.638 88.803,73.491 99.412,116.864 61.44,93.371 23.468,116.864 34.078,73.491 0,44.638 44.529,41.326 61.44,0"/></g></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" width="20" height="20" viewBox="0 0 122.88 116.864" enable-background="new 0 0 122.88 116.864" xml:space="preserve" style="fill: #174A45;"><g><polygon fill-rule="evenodd" clip-rule="evenodd" points="61.44,0 78.351,41.326 122.88,44.638 88.803,73.491 99.412,116.864 61.44,93.371 23.468,116.864 34.078,73.491 0,44.638 44.529,41.326 61.44,0"/></g></svg>
+                    </div>
+                    <span>Very Comfortable</span>
+                    <span>Ann on April the 24th</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- || RECOMMENDED PRODUCTS -->
+        <section class="recommended-products">
+            <span class="recommended-products--header">YOU MAY ALSO LIKE</span>
+
+            <div class="recommended-products--carousel">
+                <div class="carousel-cell image-wrapper product-card">
+                    <img src="assets/images/prod-img-1.webp" alt="Miu Miu Black Pointed Patent Cowboy Boots EU 36">
+                    <span class="product-card--title">Keegan Heeled Leather Ankle Boots</span>
+                    <span class="product-card--price">£95</span>
+                </div>
+                <div class="carousel-cell image-wrapper product-card">
+                    <img src="assets/images/prod-img-1.webp" alt="Miu Miu Black Pointed Patent Cowboy Boots EU 36">
+                    <span class="product-card--title">Keegan Heeled Leather Ankle Boots</span>
+                    <span class="product-card--price">£95</span>
+                </div>
+                <div class="carousel-cell image-wrapper product-card">
+                    <img src="assets/images/prod-img-1.webp" alt="Miu Miu Black Pointed Patent Cowboy Boots EU 36">
+                    <span class="product-card--title">Keegan Heeled Leather Ankle Boots</span>
+                    <span class="product-card--price">£95</span>
+                </div>
+                <div class="carousel-cell image-wrapper product-card">
+                    <img src="assets/images/prod-img-1.webp" alt="Miu Miu Black Pointed Patent Cowboy Boots EU 36">
+                    <span class="product-card--title">Keegan Heeled Leather Ankle Boots</span>
+                    <span class="product-card--price">£95</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- || BUY WITH CONFIDENCE -->
+        <section class="buy-with-confidence">
+            <img src="//cdn.shopify.com/s/files/1/0249/3343/3419/t/39/assets/Buy-in-Confidence.svg?v=169342152908988344651666182757" alt="icon">
+            <span>BUY WITH CONFIDENCE</span>
+            <p>
+                Fashions change, but our vision for exquisite craftsmanship has always remained. Throughout the years, Jones Bootmaker have carefully selected styles to bring out your personality at first glance and leave a lasting impression.
+            </p>
+        </section>
+
+        <!-- || EXTRA INFO ACCORDION -->
+        <section class="extra-info-accordion">
+            <button class="accordion">Shipping</button>
+            <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+
+            <button class="accordion">Returns</button>
+            <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+
+            <button class="accordion">Size Guide</button>
+            <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+
+            <button class="accordion">Reviews</button>
+            <div class="panel">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+        </section>
+
+        <div style="display: none;" class="pswp-gallery pswp-gallery--single-column" id="gallery--getting-started">
+            <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg" 
+              data-pswp-width="1669" 
+              data-pswp-height="2500" 
+              target="_blank">
+              <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg" alt="" />
+            </a>
+            <!-- cropped thumbnail: -->
+            <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/7/img-2500.jpg" 
+              data-pswp-width="1875" 
+              data-pswp-height="2500" 
+              data-cropped="true" 
+              target="_blank">
+              <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/7/img-200.jpg" alt="" />
+            </a>
+            <!-- data-pswp-src with custom URL in href -->
+            <a href="https://unsplash.com" 
+              data-pswp-src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg"
+              data-pswp-width="2500" 
+              data-pswp-height="1666" 
+              target="_blank">
+              <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg" alt="" />
+            </a>
+            <!-- wrapped with any element: -->
+            <div>
+              <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/6/img-2500.jpg"
+                data-pswp-width="2500" 
+                data-pswp-height="1667" 
+                target="_blank">
+                <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/6/img-200.jpg" alt="" />
+              </a>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>

@@ -100,6 +100,12 @@ li{
     text-align: center;
 }
 
+@media only screen and (min-width: 641px) {
+    .announcement-bar--content {
+        font-size: 11px;
+    }
+}
+
 /* || SITE HEADER */
 .site-header{
     box-shadow: 0 -1px #ddd inset;
@@ -153,6 +159,27 @@ li{
     width: 18px;
 }
 
+@media only screen and (min-width: 600px) {
+    .site-header--logo img {
+      width: 70%;
+    }
+}
+
+@media only screen and (min-width: 641px) {
+    .site-header--top-nav-wrapper {
+        padding: 18px 30px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .site-header--logo img {
+        width: 50%;
+        max-width: 200px;
+    }
+}
+  
+
+
 /* || BREADCRUMBS */
 .breadcrumbs--list{
     display: flex;
@@ -180,6 +207,30 @@ li{
     text-overflow: ellipsis;
 }
 
+@media only screen and (min-width: 1008px) {
+    .breadcrumbs--list {
+        padding-top: 45px;
+        margin-left: 50px;
+        justify-content: flex-start;
+    }
+
+    .breadcrumbs--list-item {
+        margin-right: 8px;
+    }
+
+    .breadcrumbs--list-item__product a{
+        width: auto;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .breadcrumbs--list {
+        max-width: 1200px;
+        padding-left: 50px;
+        margin: 0 auto;
+    }
+}
+
 /* || PRODUCT */
 .product-gallery{
     display: grid;
@@ -200,6 +251,7 @@ li{
     width: 100%;
     height: 100%;
     object-fit: contain;
+    mix-blend-mode: darken;
 }
 
 .prod-img-main{
@@ -242,7 +294,6 @@ li{
 }
 
 .product-info{
-    max-width: 500px;
     padding: 0 24px;
     margin: 0 auto;
 }
@@ -378,6 +429,77 @@ li{
     margin-bottom: 0;
 }
 
+@media only screen and (min-width: 425px) {
+    .product-media--carousel .carousel-cell{
+        width: calc(20% - 8px);
+    }
+
+    .product-media--carousel .carousel-cell img{
+        height: auto;
+    }
+}
+
+@media only screen and (min-width: 641px) {
+    .product-gallery {
+        margin-bottom: 65px;
+    }
+
+    .product-info{
+        padding: 0;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .product-media--carousel .carousel-cell{
+        width: calc( 33.333% - 13px );
+        margin-right: 20px;
+    }
+}
+
+@media only screen and (min-width: 1008px) {
+    .product-wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 50px;
+        padding: 0 50px;
+    }
+
+    .product-gallery .prod-grid-img:nth-child(2){
+        display: block;
+        background-color: #ddd;
+    }
+
+    .product-gallery .prod-grid-img:nth-child(3){
+        display: block;
+        background-color: #ddd;
+    }
+
+    .product-info--brand-heading{
+        text-align: left;
+    }
+
+    .product-info--title{
+        font-size: 32px;
+        text-align: left;
+    }
+
+    .product-info--price{
+        text-align: left;
+    }
+
+    .product-info--delivery-list{
+        text-align: left;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .product-wrapper{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+  
+
 /* || RECOMMENDED PRODUCTS */
 .recommended-products{
     border-top: 1px solid #ddd;
@@ -431,6 +553,38 @@ li{
     display: block;
 }
 
+@media only screen and (min-width: 641px) {
+    .recommended-products--carousel .product-card {
+        width: 33.3333%;
+        padding: 0 15px;
+    }
+}
+
+@media only screen and (min-width: 1008px) {
+    .recommended-products{
+        padding: 80px 0;
+    }
+
+    .recommended-products--header{
+        font-size: 32px;
+    }
+
+    .recommended-products--carousel{
+        margin: 0 90px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .recommended-products--carousel{
+        max-width: 1200px;
+        padding: 0 50px;
+        margin: 0 auto;
+    }
+    .recommended-products--carousel .product-card{
+        width: 25%;
+    }
+}
+
 /* || BUY WITH CONFIDENCE */
 .buy-with-confidence{
     background: #fcfcfc;
@@ -459,6 +613,23 @@ li{
     font-family: Montserrat;
     font-size: 14px;
     letter-spacing: 2.4px;
+}
+
+@media only screen and (min-width: 1008px) {
+    .buy-with-confidence{
+        padding: 80px;
+    }
+
+    .buy-with-confidence span{
+        font-size: 32px;
+    }
+}
+
+@media only screen and (min-width: 1008px) {
+    .buy-with-confidence p{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 }
 
 /* || EXTRA INFO ACCORDION */
@@ -515,4 +686,21 @@ li{
     font-size: 14px;
     letter-spacing: 1.4px;
     color: #343434;
+}
+
+@media only screen and (min-width: 1008px) {
+    .extra-info-accordion{
+        /* max-width: 1200px;
+        margin: 0 auto; */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .extra-info-accordion .accordion{
+        border: 1px solid #ddd;
+    }
+
+    .extra-info-accordion .panel{
+        border: 1px solid #ddd;
+    }
 }

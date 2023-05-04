@@ -1,3 +1,21 @@
+// Init swipers
+var elem = document.querySelector(".product-media--carousel");
+var flkty = new Flickity(elem, {
+  cellAlign: "left",
+  contain: true,
+  prevNextButtons: false,
+  pageDots: false,
+});
+
+var elem = document.querySelector(".recommended-products--carousel");
+var flkty = new Flickity(elem, {
+  cellAlign: "left",
+  contain: true,
+  prevNextButtons: false,
+  pageDots: false,
+  groupCells: true,
+});
+
 // Gets all elements inside a flex container and calcs the space between each child. Then it sets new width for product name breadcrumb for better layout
 function calcSpaceBetween(selector) {
   const parent = document.querySelector(selector);
@@ -40,27 +58,6 @@ window.addEventListener("resize", (event) => {
   }, 10);
 });
 
-// Swiper
-var elem = document.querySelector(".product-media--carousel");
-var flkty = new Flickity(elem, {
-  // options
-  cellAlign: "left",
-  contain: true,
-  prevNextButtons: false,
-  pageDots: false,
-});
-
-// Swiper
-var elem = document.querySelector(".recommended-products--carousel");
-var flkty = new Flickity(elem, {
-  // options
-  cellAlign: "left",
-  contain: true,
-  prevNextButtons: false,
-  pageDots: false,
-  groupCells: true,
-});
-
 // accordion
 const acc = document.getElementsByClassName("accordion");
 let i;
@@ -77,7 +74,7 @@ for (i = 0; i < acc.length; i++) {
   });
 }
 
-// colour and size selector
+// colour and size selectors
 const colourSelectors = document.querySelectorAll(
   ".product-info--colour-selector ul li"
 );
@@ -105,3 +102,31 @@ sizeSelectors.forEach((selector) => {
     selector.classList.add("active");
   });
 });
+
+window.addEventListener("resize", (event) => {
+  //Debounce
+  clearTimeout(debounce);
+  debounce = setTimeout(() => {
+    if (window.screen.width > 1008) {
+      calcSpaceBetween("nav .breadcrumbs--list");
+    }
+  }, 10);
+});
+
+const accordions = document.querySelectorAll(
+  ".extra-info-accordion .accordion"
+);
+
+if (window.screen.width > 1008) {
+  accordions.forEach((accordion) => {
+    accordion.classList.add("active");
+
+    const panel = accordion.nextElementSibling;
+
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}

@@ -7,6 +7,8 @@ var flkty = new Flickity(elem, {
   pageDots: false,
 });
 
+flkty.resize();
+
 var elem = document.querySelector(".recommended-products--carousel");
 var flkty = new Flickity(elem, {
   cellAlign: "left",
@@ -15,6 +17,8 @@ var flkty = new Flickity(elem, {
   pageDots: false,
   groupCells: true,
 });
+
+flkty.resize();
 
 // Gets all elements inside a flex container and calcs the space between each child. Then it sets new width for product name breadcrumb for better layout
 function calcSpaceBetween(selector) {
